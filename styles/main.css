@@ -1,0 +1,66 @@
+.about-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-box {
+  width: 50%;
+  border-right: 1px solid #323232;
+  padding-top: 50px;
+}
+
+.title-box strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 500;
+  color: #323232;
+  line-height: 32px;
+}
+
+.title-box strong span {
+  display: block;
+  font-size: 26px;
+  font-weight: 500;
+  color: #9477ff;
+}
+
+.title-box .btn-resume {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  font-size: 16px;
+  color: #323232;
+  border: 1px solid #323232;
+  border-radius: 3px;
+}
+
+.title-box .btn-resume:hover {
+  color: #fff;
+  background: #323232;
+  transition: all .3s;
+}
+
+.contents-box {
+  width: 50%;
+  padding-left: 5%;
+  padding: 20px 0 15px 5%;
+}
+
+.contents-box dl dt {
+  font-size: 18px;
+  font-weight: 500;
+  color: #323232;
+  line-height: 28px;
+}
+
+.contents-box dl dt:nth-child(n + 2) {
+  margin-top: 20px;
+}
+
+.contents-box dl dd {
+  font-size: 16px;
+  color: #323232;
+  line-height: 24px;
+}
+
+

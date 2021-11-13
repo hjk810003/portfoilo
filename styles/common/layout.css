@@ -3,27 +3,117 @@
     - header 및 footer 등 다른 페이지에서도 공통으로 사용하는 layout css 적용
 */
 
-/* header */
-header {position: fixed; width: 100%; margin: 0 auto; padding: 35px 30px 0; box-sizing: border-box; background: #fff; z-index: 99;}
-header::before {content: ''; position: absolute; left: 0; top: 0; width: 100%;height: 35px;margin: 0 auto; background:#69b848;}
-header .top-util {position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1180px; height: 35px; line-height: 35px;}
-header .top-util .sns-area {float: left;}
-header .top-util .sns-area ul>li {float: left; margin-left: 10px; box-sizing: border-box;}
-header .top-util .sns-area ul>li>a>img {display: inline-block; vertical-align: middle;}
-header .top-util .util-nav {float: right;}
-header .top-util .util-nav ul>li {float: left; box-sizing: border-box; text-align: center;}
-header .top-util .util-nav ul>li>a {display: block; font-size: 14px; color: #fff;}
-header .top-util .util-nav ul>li>a>img {display: inline-block; vertical-align: middle;}
-header .top-util .util-nav ul>li:not(:first-child)>a {width: 35px; margin-left: 1px; background: #11803f;}
-header .top-util .util-nav ul>li>.btn-home-index {position: relative; margin-right: 24px; padding-right: 14px;}
-header .top-util .util-nav ul>li>.btn-home-index::before {content:''; position: absolute; top: 14px; right: 0; width: 4px; height: 7px; background:url(../../images/layout/ico/ico_arrR_s_white.png) no-repeat center center;}
-header .logo {display: block; width: 200px; height: 40px; margin: 20px auto;}
-header .gnb-nav {width: 100%; max-width: 1180px; height: 48px; margin: 0 auto; line-height: 48px; border-top: 1px solid #eaeaea; box-sizing: border-box;}
-header .gnb-nav ul>li {float: left; width: 12.5%; box-sizing: border-box; text-align: center;}
-header .gnb-nav ul>li>a {display: block; color: #222; font-size: 18px; font-weight: 500;}
+.inner-wrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
 
-/* main */
-#container {padding-top: 164px;}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
 
-/* footer */
-footer {}
+header nav {
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header nav ul li {
+  float: left;
+}
+
+header nav ul li+li {
+  margin-left: 80px;
+}
+
+header nav ul li a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #040404;
+}
+
+header nav ul li:hover a {
+  color: #0029ae;
+}
+
+.box {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px rgba(black, .2);
+  background: lighten(#f0f4c3, 10%);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave {
+  opacity: .4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #0af;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .1;
+  background: yellow;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+h1{
+  position: fixed;
+  top: 50px;
+  left: 25px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #040404;
+  opacity: .7;
+  z-index: 2;
+  transform: rotate(90deg);
+}
+
+.title{
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  line-height: 70px;
+}
+.title span{
+  font-size: 18px;
+}
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}

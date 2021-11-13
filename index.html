@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script async src="/js/common/jquery-1.12.4.min.js"></script>
+  <script async src="/js/lib/scrolloverflow.min.js"></script>  
   <script async src="/js/lib/fullpage.js"></script>
 
   <link rel="stylesheet" href="/styles/common/reset.css">
@@ -24,16 +25,16 @@
       <nav class="inner-wrap">
         <ul class="float-area">
           <li>
-            <a href="javascript:void(0);">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="javascript:void(0);">About me</a>
+            <a href="#aboutMe">About me</a>
           </li>
           <li>
-            <a href="javascript:void(0);">Portfolio</a>
+            <a href="#portfoilo">Portfolio</a>
           </li>
           <li>
-            <a href="javascript:void(0);">Contact</a>
+            <a href="#contactMe">Contact</a>
           </li>
         </ul>
       </nav>
@@ -76,17 +77,20 @@
         </section>
       </div>
       <div class="section" id="section2">
-
+        portfoilo
       </div>
       <div class="section" id="section3">
-
+        contact me
       </div>
     </div>
   </div>
 
 </body>
 <script type="text/javascript">
-  var myFullpage = new fullpage('.fullpage');
+  var myFullpage = new fullpage('.fullpage', {
+    anchors: ['home', 'aboutMe', 'portfoilo', 'contactMe'],
+    scrollOverflow: true
+  });
 </script>
 
 </html>

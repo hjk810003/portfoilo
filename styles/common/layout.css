@@ -16,6 +16,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1;
+  background: rgba(255, 255, 255, .3);
 }
 
 header nav {
@@ -40,7 +41,7 @@ header nav ul li a {
 }
 
 header nav ul li:hover a {
-  color: #0029ae;
+  color: #455de0;
 }
 
 .box {
@@ -58,11 +59,11 @@ header nav ul li:hover a {
   position: absolute;
   top: 50%;
   left: 50%;
-  background: #0af;
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  margin-top: -250px;
+  background: #455de0;
+  width: 460px;
+  height: 460px;
+  margin-left: -230px;
+  margin-top: -230px;
   transform-origin: 50% 48%;
   border-radius: 43%;
   animation: drift 3000ms infinite linear;
@@ -70,6 +71,7 @@ header nav ul li:hover a {
 
 .wave.-three {
   animation: drift 5000ms infinite linear;
+  background: #007bff;
 }
 
 .wave.-two {
@@ -103,16 +105,47 @@ h1{
 }
 
 .title{
-  font-family: 'Playfair Display', serif;
-  font-size: 60px;
-  text-align: center;
-  color: #fff;
   position: relative;
-  line-height: 70px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
 }
+
+.title h2{
+  font-size: 55px;
+  line-height: 90px;
+}
+
 .title span{
-  font-size: 18px;
+  font-size: 16px;
 }
+
+.btn-line {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 16px;
+  color: #323232;
+  border: 1px solid #323232;
+  border-radius: 3px;
+}
+
+.btn-line:hover {
+  color: #fff;
+  background: rgba(69, 93, 224, 0.7);
+  border: 1px solid rgba(69, 93, 224, 0.7);
+  transition: all .3s;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .copyright {
+  font-size: 16px;
+  color: #474747;
+}
+
 @keyframes drift {
   from { transform: rotate(0deg); }
   from { transform: rotate(360deg); }

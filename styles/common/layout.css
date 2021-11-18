@@ -8,6 +8,8 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 header {
@@ -137,11 +139,15 @@ h1{
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
   padding: 20px 0;
   text-align: center;
 }
 
 footer .copyright {
+  margin: 0 auto;
   font-size: 16px;
   color: #474747;
 }

@@ -55,7 +55,8 @@
 }
 
 .portfoilo-wrap {
-  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .portfoilo-item {
@@ -72,12 +73,12 @@
   width: 50%;
 }
 
-.portfoilo-item>div:first-child {
+.portfoilo-item .left-box {
   padding-right: 5%;
-  border-right: 1px solid #323232;
+  border-right: 1px solid #ddd;
 }
 
-.portfoilo-item>div:last-child {
+.portfoilo-item .right-box {
   padding-left: 5%;
 }
 
@@ -146,4 +147,28 @@
   height: 100%;
   background: #ddd;
 }
+
+.contact-wrap {
+  text-align: center;
+}
+
+.contact-wrap .title {
+  display: block;
+  font-size: 24px;
+  color: #040404;
+}
+
+.contact-wrap .mail {
+  display: block;
+  margin: 20px 0;
+  font-size: 60px;
+  color: #040404;
+}
+
+.contact-wrap .text {
+  display: block;
+  font-size: 24px;
+  color: #323232;
+}
+
 

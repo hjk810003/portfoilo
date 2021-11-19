@@ -1,0 +1,183 @@
+$black: #040404;
+$blue: #455de0;
+
+.about-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  .title-box {
+    position: relative;
+    width: 50%;
+    border-right: 1px solid #323232;
+    padding-top: 20px;
+
+    strong {
+      display: block;
+      font-size: 32px;
+      font-weight: 500;
+      color: #323232;
+      line-height: 45px;
+
+      span {
+        display: block;
+        color: $blue;
+      }
+    }
+
+    .btn-resume {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      margin-top: 20px;
+    }
+  }
+
+  .contents-box {
+    width: 50%;
+    padding-left: 5%;
+    padding: 20px 0 15px 5%;
+  
+    dl {
+      dt {
+        font-size: 18px;
+        font-weight: 500;
+        color: #323232;
+        line-height: 28px;
+  
+        &:nth-child(n + 2) {
+          margin-top: 20px;
+        }
+      }
+  
+      dd {
+        margin-top: 5px;
+        font-size: 16px;
+        color: #323232;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.portfoilo-wrap {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .portfoilo-item {
+    display: flex;
+    justify-content: space-between;
+
+    &:nth-child(n+2) {
+      margin-top: 100px;
+    }
+
+    >div {
+      position: relative;
+      width: 50%;
+    }
+
+    .left-box {
+      padding-right: 5%;
+      border-right: 1px solid #ddd;
+    }
+    
+    .right-box {
+      padding-left: 5%;
+    }
+
+    .txt-box {
+      .tit-area {
+        .num {
+          display: block;
+          font-size: 32px;
+          color: #f2afa3;
+          font-weight: 500;
+        }
+
+        .tit {
+          display: inline-block;
+          margin-top: 15px;
+          font-size: 32px;
+          line-height: 36px;
+          font-weight: 500;
+          color: $black;
+
+          .category {
+            display: block;
+            font-size: 16px;
+            font-weight: 300;
+          }
+        }
+      }
+
+      dl {
+        position: relative;
+        padding-top: 30px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 15px;
+          left: 0;
+          width: 15px;
+          height: 1px;
+          background: #f2afa3;
+        }
+
+        dt {
+          font-size: 18px;
+          font-weight: 500;
+          color: #323232;
+          line-height: 28px;
+
+          &:nth-child(n + 2) {
+            margin-top: 15px;
+          }
+        }
+        
+        dd {
+          margin-top: 5px;
+          font-size: 16px;
+          color: #323232;
+          line-height: 24px;
+        }
+      }
+
+      .btn-process {
+        margin-top: 50px;
+      }
+    }
+
+    .img-box {
+      .img {
+        width: 100%;
+        height: 100%;
+        background: #ddd;
+      }
+    }
+  }
+}
+
+.contact-wrap {
+  text-align: center;
+
+  .title {
+    display: block;
+    font-size: 24px;
+    color: $black;
+  }
+  
+  .mail {
+    display: block;
+    margin: 20px 0;
+    font-size: 60px;
+    color: $black;
+  }
+  
+  .text {
+    display: block;
+    font-size: 24px;
+    color: #323232;
+  }
+}
+

@@ -154,6 +154,7 @@ h1 {
 
 .title span {
   font-size: 16px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .btn-line {
@@ -177,13 +178,14 @@ footer {
   position: fixed;
   bottom: 0;
   z-index: 5;
+  width: 100%;
   padding: 20px 0;
   text-align: center;
 }
 
 footer .copyright {
-  margin: 0 auto;
   font-size: 16px;
-  color: #474747;
+  color: #040404;
+  opacity: .7;
 }
 /*# sourceMappingURL=layout.css.map */

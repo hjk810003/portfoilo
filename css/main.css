@@ -110,7 +110,6 @@
   display: block;
   font-size: 16px;
   font-weight: 300;
-  color: #040404;
 }
 
 .portfoilo-wrap .portfoilo-item .txt-box dl {
@@ -160,22 +159,36 @@
   text-align: center;
 }
 
-.contact-wrap .title {
+.contact-wrap .tit {
   display: block;
-  font-size: 24px;
+  font-size: 28px;
   color: #040404;
 }
 
 .contact-wrap .mail {
   display: block;
-  margin: 20px 0;
+  position: relative;
+  padding: 40px 0 60px;
   font-size: 60px;
   color: #040404;
+}
+
+.contact-wrap .mail::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 15px;
+  height: 1px;
+  background: #455de0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .contact-wrap .text {
   display: block;
   font-size: 24px;
+  font-weight: 300;
   color: #323232;
 }
 /*# sourceMappingURL=main.css.map */

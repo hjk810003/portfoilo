@@ -1,3 +1,7 @@
+.section {
+  min-height: 100vh;
+}
+
 .about-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,7 +15,7 @@
   position: relative;
   width: 50%;
   border-right: 1px solid #323232;
-  padding-top: 20px;
+  padding: 20px 5% 0 0;
 }
 
 .about-wrap .title-box strong {
@@ -151,8 +155,41 @@
 
 .portfoilo-wrap .portfoilo-item .img-box .img {
   width: 100%;
-  height: 100%;
-  background: #ddd;
+  padding-top: 100%;
+  background: #f00;
+  -webkit-box-shadow: 9px 5px 15px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 9px 5px 15px 1px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 0 left 50%;
+}
+
+.portfoilo-wrap .portfoilo-item .img-box .img.daelim {
+  background-image: url("/images/daelim.png");
+}
+
+.portfoilo-wrap .portfoilo-item .img-box .img.gtec {
+  background-image: url("/images/gtec.png");
+}
+
+.portfoilo-wrap .portfoilo-item .img-box .img.inha {
+  background-image: url("/images/inha.png");
+}
+
+.portfoilo-wrap .portfoilo-item .img-box .img.kca {
+  background-image: url("/images/kca.png");
+}
+
+.portfoilo-wrap .portfoilo-item .img-box .img.ikea {
+  background-image: url("/images/ikea.png");
+}
+
+.portfoilo-wrap .portfoilo-item .img-box .img.zooCoffee {
+  background-image: url("/images/zooCoffee.png");
+}
+
+.portfoilo-wrap .portfoilo-item .img-box .img img {
+  max-width: 100%;
 }
 
 .contact-wrap {

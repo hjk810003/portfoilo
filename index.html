@@ -25,7 +25,7 @@
   <div id="wrap">
     <header>
       <nav class="inner-wrap">
-        <ul class="float-area">
+        <ul class="gnb float-area">
           <li>
             <a href="#home">Home</a>
           </li>
@@ -49,8 +49,10 @@
           <div class='wave two'></div>
           <div class='wave three'></div>
           <div class="title">
-            <h2>PORTFOLIO</h2>
-            <span>Web Publisher</span>
+            <h2>
+              PORTFOLIO
+              <span>Web Publisher</span>              
+            </h2>
           </div>
       </div>
 
@@ -121,13 +123,17 @@
               <a href="javascript:void(0);" class="btn-process btn-line">작업 과정 보기</a>
             </div>
             <div class="img-box right-box">
-              <div class="img"></div>
+              <figure class="img daelim">
+                <figcaption class="skip">대림대학교</figcaption>
+              </figure>
             </div>
           </div>
 
           <div class="portfoilo-item">
             <div class="img-box left-box">
-              <div class="img"></div>
+              <figure class="img gtec">
+                <figcaption class="skip">경기과학기술대학교</figcaption>
+              </figure>
             </div>
             <div class="txt-box right-box">
               <div class="tit-area">
@@ -179,13 +185,17 @@
               <a href="javascript:void(0);" class="btn-process btn-line">작업 과정 보기</a>
             </div>
             <div class="img-box right-box">
-              <div class="img"></div>
+              <figure class="img inha">
+                <figcaption class="skip">인하대학교</figcaption>
+              </figure>
             </div>
           </div>
 
           <div class="portfoilo-item">
             <div class="img-box left-box">
-              <div class="img"></div>
+              <figure class="img kca">
+                <figcaption class="skip">고려사이버대학교</figcaption>
+              </figure>
             </div>
             <div class="txt-box right-box">
               <div class="tit-area">
@@ -238,13 +248,17 @@
               <a href="javascript:void(0);" class="btn-process btn-line">작업 과정 보기</a>
             </div>
             <div class="img-box right-box">
-              <div class="img"></div>
+              <figure class="img ikea">
+                <figcaption class="skip">이케아</figcaption>
+              </figure>
             </div>
           </div>
 
           <div class="portfoilo-item">
             <div class="img-box left-box">
-              <div class="img"></div>
+              <figure class="img zooCoffee">
+                <figcaption class="skip">주커피</figcaption>
+              </figure>
             </div>
 
             <div class="txt-box right-box">
@@ -298,6 +312,9 @@
     anchors: ['home', 'aboutMe', 'portfoilo', 'contactMe'],
     scrollOverflow: true
   });
+  // var anchor = '';
+  var a = $('ul.gnb li a')
+  console.log(a)
 </script>
 
 </html>

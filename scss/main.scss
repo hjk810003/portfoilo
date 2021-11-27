@@ -1,6 +1,11 @@
 $black: #040404;
 $blue: #455de0;
 
+
+.section{
+  min-height: 100vh;
+}
+
 .about-wrap {
   display: flex;
   justify-content: space-between;
@@ -9,7 +14,7 @@ $blue: #455de0;
     position: relative;
     width: 50%;
     border-right: 1px solid #323232;
-    padding-top: 20px;
+    padding: 20px 5% 0 0;
 
     strong {
       display: block;
@@ -151,8 +156,34 @@ $blue: #455de0;
     .img-box {
       .img {
         width: 100%;
-        height: 100%;
-        background: #ddd;
+        padding-top: 100%;
+        background: #f00;
+        -webkit-box-shadow: 9px 5px 15px 1px rgba(0,0,0,0.2); 
+        box-shadow: 9px 5px 15px 1px rgba(0,0,0,0.2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top 0 left 50%;
+        &.daelim{
+          background-image: url('/images/daelim.png');
+        }
+        &.gtec{
+          background-image: url('/images/gtec.png');
+        }
+        &.inha{
+          background-image: url('/images/inha.png');
+        }
+        &.kca{
+          background-image: url('/images/kca.png');
+        }
+        &.ikea{
+          background-image: url('/images/ikea.png');
+        }
+        &.zooCoffee{
+          background-image: url('/images/zooCoffee.png');
+        }
+        img{
+          max-width: 100%;
+        }
       }
     }
   }

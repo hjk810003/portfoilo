@@ -74,6 +74,10 @@ header nav ul li:hover a {
   color: #455de0;
 }
 
+header nav ul li.active a {
+  color: #455de0;
+}
+
 .box {
   width: 100%;
   border-radius: 5px;

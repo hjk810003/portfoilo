@@ -52,6 +52,9 @@ header {
       &:hover a{
         color: $blue;
       }
+      &.active a {
+        color: $blue;
+      }
     }
   }
 }

@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script async src="/js/common/jquery-1.12.4.min.js"></script>
-  <script async src="/js/lib/scrolloverflow.min.js"></script>
-  <script async src="/js/lib/jquery.fullpage.min.js"></script>
+  <script src="/js/common/jquery-3.6.0.min.js"></script>
+  <script src="/js/lib/scrolloverflow.min.js"></script>
+  <script src="/js/lib/jquery.fullpage.min.js"></script>
 
   <link rel="stylesheet" href="/styles/common/reset.css">
   <link rel="stylesheet" href="/styles/lib/jquery.fullpage.min.css">
@@ -43,7 +43,7 @@
       </nav>
     </header>
 
-    <div class="fullpage">
+    <div id="fullpage">
       <div class="section box" id="section0">
         <div class='wave one'></div>
         <div class='wave two'></div>
@@ -64,7 +64,7 @@
               저의 능력에 대해 <br>소개할게요!
             </strong>
 
-            <a href="https://apricot-composer-e98.notion.site/RESUME-9ccb43f375e840e2b6080f5aee6763f7"
+            <a href="https://apricot-composer-e98.notion.site/RESUME-9ccb43f375e840e2b6080f5aee6763f7" target="_blank"
               class="btn-resume btn-line">이력서 (링크)</a>
           </div>
           <div class="contents-box">
@@ -121,7 +121,7 @@
                   모든 페이지들은 반응형으로 작업하여 사용자가 다양한 디바이스로 쉽게 접근할 수 있도록 하였습니다.
               </dl>
 
-              <a href="https://apricot-composer-e98.notion.site/98587253d8f74712b0df0cfaf2fb9df4"
+              <a href="https://apricot-composer-e98.notion.site/98587253d8f74712b0df0cfaf2fb9df4" target="_blank"
                 class="btn-process btn-line">작업 과정 보기</a>
             </div>
             <div class="img-box right-box">
@@ -158,7 +158,7 @@
                 </dd>
               </dl>
 
-              <a href="https://apricot-composer-e98.notion.site/8643395141594037af86008129c24125"
+              <a href="https://apricot-composer-e98.notion.site/8643395141594037af86008129c24125" target="_blank"
                 class="btn-process btn-line">작업 과정 보기</a>
             </div>
           </div>
@@ -185,7 +185,7 @@
                 </dd>
               </dl>
 
-              <a href="https://apricot-composer-e98.notion.site/fb7693010ea14adca7f3d5b7f00e9126"
+              <a href="https://apricot-composer-e98.notion.site/fb7693010ea14adca7f3d5b7f00e9126" target="_blank"
                 class="btn-process btn-line">작업 과정 보기</a>
             </div>
             <div class="img-box right-box">
@@ -222,7 +222,7 @@
                 </dd>
               </dl>
 
-              <a href="https://apricot-composer-e98.notion.site/8f1d88e61cb046d48fed2d28d20d77bc"
+              <a href="https://apricot-composer-e98.notion.site/8f1d88e61cb046d48fed2d28d20d77bc" target="_blank"
                 class="btn-process btn-line">작업 과정 보기</a>
             </div>
           </div>
@@ -250,7 +250,7 @@
               </dl>
 
 
-              <a href="https://apricot-composer-e98.notion.site/IKEA-c4e3115b4d6a485b80527a8b8cf38eea"
+              <a href="https://apricot-composer-e98.notion.site/IKEA-c4e3115b4d6a485b80527a8b8cf38eea" target="_blank"
                 class="btn-process btn-line">작업 과정 보기</a>
             </div>
             <div class="img-box right-box">
@@ -288,7 +288,7 @@
                 </dd>
               </dl>
 
-              <a href="https://apricot-composer-e98.notion.site/Zoo-Coffee-22c045baa9a34d31b99f479193bff019"
+              <a href="https://apricot-composer-e98.notion.site/Zoo-Coffee-22c045baa9a34d31b99f479193bff019" target="_blank"
                 class="btn-process btn-line">작업 과정 보기</a>
             </div>
           </div>
@@ -315,14 +315,17 @@
 
 </body>
 <script type="text/javascript">
-  var myFullpage = new fullpage('.fullpage', {
+
+  $('#fullpage').fullpage({
     anchors: ['Home', 'AboutMe', 'Portfoilo', 'Contact'],
     scrollOverflow: true,
-    afterLoad: function (anchorLink, current) {
+    afterLoad: function (anchorLink, index) {
       $('ul.gnb li').removeClass('active');
-      $('ul.gnb li').eq(current.index).addClass('active');
-      $('h1.anchor').text(current.anchor)
-    }
+      $('ul.gnb li')
+        .eq(index - 1)
+        .addClass('active');
+      $('h1.anchor').text(anchorLink);
+    },
   });
 </script>
 

@@ -43,6 +43,26 @@
       </nav>
     </header>
 
+    <nav class="mobile-menu">
+      <div class="btn-menu">
+        <span></span>
+      </div>
+      <ul class="hide-menu">
+        <li class="active">
+          <a href="#Home">Home</a>
+        </li>
+        <li>
+          <a href="#AboutMe">About me</a>
+        </li>
+        <li>
+          <a href="#Portfoilo">Portfolio</a>
+        </li>
+        <li>
+          <a href="#Contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
     <div id="fullpage">
       <div class="section box" id="section0">
         <div class='wave one'></div>
@@ -100,7 +120,7 @@
       <div class="section" id="section2">
         <section class="portfoilo-wrap inner-wrap">
 
-          <div class="portfoilo-item">
+          <div class="portfoilo-item float-area">
             <div class="txt-box left-box">
               <div class="tit-area">
                 <i class="num">01</i>
@@ -131,12 +151,7 @@
             </div>
           </div>
 
-          <div class="portfoilo-item">
-            <div class="img-box left-box">
-              <figure class="img gtec">
-                <figcaption class="skip">경기과학기술대학교</figcaption>
-              </figure>
-            </div>
+          <div class="portfoilo-item float-area">
             <div class="txt-box right-box">
               <div class="tit-area">
                 <i class="num">02</i>
@@ -161,9 +176,14 @@
               <a href="https://apricot-composer-e98.notion.site/8643395141594037af86008129c24125" target="_blank"
                 class="btn-process btn-line">작업 과정 보기</a>
             </div>
+            <div class="img-box left-box">
+              <figure class="img gtec">
+                <figcaption class="skip">경기과학기술대학교</figcaption>
+              </figure>
+            </div>
           </div>
 
-          <div class="portfoilo-item">
+          <div class="portfoilo-item float-area">
             <div class="txt-box left-box">
               <div class="tit-area">
                 <i class="num">03</i>
@@ -195,12 +215,7 @@
             </div>
           </div>
 
-          <div class="portfoilo-item">
-            <div class="img-box left-box">
-              <figure class="img kca">
-                <figcaption class="skip">고려사이버대학교</figcaption>
-              </figure>
-            </div>
+          <div class="portfoilo-item float-area">
             <div class="txt-box right-box">
               <div class="tit-area">
                 <i class="num">04</i>
@@ -225,9 +240,14 @@
               <a href="https://apricot-composer-e98.notion.site/8f1d88e61cb046d48fed2d28d20d77bc" target="_blank"
                 class="btn-process btn-line">작업 과정 보기</a>
             </div>
+            <div class="img-box left-box">
+              <figure class="img kca">
+                <figcaption class="skip">고려사이버대학교</figcaption>
+              </figure>
+            </div>
           </div>
 
-          <div class="portfoilo-item">
+          <div class="portfoilo-item float-area">
             <div class="txt-box left-box">
               <div class="tit-area">
                 <i class="num">05</i>
@@ -260,13 +280,7 @@
             </div>
           </div>
 
-          <div class="portfoilo-item">
-            <div class="img-box left-box">
-              <figure class="img zooCoffee">
-                <figcaption class="skip">주커피</figcaption>
-              </figure>
-            </div>
-
+          <div class="portfoilo-item float-area">
             <div class="txt-box right-box">
               <div class="tit-area">
                 <i class="num">06</i>
@@ -288,8 +302,13 @@
                 </dd>
               </dl>
 
-              <a href="https://apricot-composer-e98.notion.site/Zoo-Coffee-22c045baa9a34d31b99f479193bff019" target="_blank"
-                class="btn-process btn-line">작업 과정 보기</a>
+              <a href="https://apricot-composer-e98.notion.site/Zoo-Coffee-22c045baa9a34d31b99f479193bff019"
+                target="_blank" class="btn-process btn-line">작업 과정 보기</a>
+            </div>
+            <div class="img-box left-box">
+              <figure class="img zooCoffee">
+                <figcaption class="skip">주커피</figcaption>
+              </figure>
             </div>
           </div>
         </section>
@@ -327,6 +346,13 @@
       $('h1.anchor').text(anchorLink);
     },
   });
+
+  $(".btn-menu").click(function () {
+    $('.btn-menu').toggleClass("active");
+    $(".hide-menu").toggleClass("show");
+  });
+
+
 </script>
 
 </html>

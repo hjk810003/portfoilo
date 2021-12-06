@@ -78,6 +78,113 @@ header nav ul li.active a {
   color: #455de0;
 }
 
+.mobile-menu {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  margin: 0;
+  z-index: 9;
+}
+
+.btn-menu {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  z-index: 99;
+  top: 25px;
+  right: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.btn-menu span {
+  width: 22px;
+  height: 2px;
+  display: block;
+  background-color: #706fff;
+  margin: 16px auto 0px;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-menu span:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  top: 8px;
+  left: 0;
+  background-color: #706fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-menu span:after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  top: 16px;
+  left: 0;
+  background-color: #706fff;
+}
+
+.btn-menu.active {
+  background-color: #ff8988;
+}
+
+.btn-menu.active span {
+  background-color: #fff;
+  margin: 24px auto 0px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+
+.btn-menu.active span:before {
+  background-color: #fff;
+  margin: -8px auto 0px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+}
+
+.btn-menu.active span:after {
+  display: none;
+}
+
+.hide-menu {
+  position: fixed;
+  padding: 100px 80px 0 80px;
+  width: 0%;
+  height: 100vh;
+  background-color: #fafafa;
+  z-index: 98;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  right: -100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hide-menu li {
+  margin-bottom: 10px;
+}
+
+.hide-menu.show {
+  width: 60%;
+  right: 0;
+}
+
 .box {
   width: 100%;
   border-radius: 5px;
@@ -201,6 +308,20 @@ footer {
 footer .copyright {
   font-size: 16px;
   color: #ddd;
-  opacity: .7;
+  opacity: 0.7;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    top: 20px;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  header {
+    display: none;
+  }
 }
 /*# sourceMappingURL=layout.css.map */

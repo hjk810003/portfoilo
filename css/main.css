@@ -16,6 +16,8 @@
   width: 50%;
   border-right: 1px solid #323232;
   padding: 20px 5% 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .about-wrap .title-box strong {
@@ -68,9 +70,7 @@
 }
 
 .portfoilo-wrap .portfoilo-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -83,14 +83,18 @@
 .portfoilo-wrap .portfoilo-item > div {
   position: relative;
   width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .portfoilo-wrap .portfoilo-item .left-box {
+  float: left;
   padding-right: 5%;
   border-right: 1px solid #ddd;
 }
 
 .portfoilo-wrap .portfoilo-item .right-box {
+  float: right;
   padding-left: 5%;
 }
 
@@ -185,7 +189,7 @@
 }
 
 .portfoilo-wrap .portfoilo-item .img-box .img.zooCoffee {
-  background-image: url("/images/zooCoffee.png");
+  background-image: url("/images/zoocoffee.png");
 }
 
 .portfoilo-wrap .portfoilo-item .img-box .img img {
@@ -227,5 +231,66 @@
   font-size: 24px;
   font-weight: 300;
   color: #323232;
+}
+
+@media all and (max-width: 768px) {
+  .about-wrap {
+    display: block;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .about-wrap .title-box {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  .about-wrap .title-box .btn-resume {
+    position: static;
+  }
+  .about-wrap .contents-box {
+    width: 100%;
+    padding-left: 0;
+  }
+  .portfoilo-wrap {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .portfoilo-wrap .portfoilo-item {
+    display: block;
+  }
+  .portfoilo-wrap .portfoilo-item > div {
+    position: relative;
+    width: 100%;
+  }
+  .portfoilo-wrap .portfoilo-item > div + div {
+    margin-top: 30px;
+  }
+  .portfoilo-wrap .portfoilo-item .left-box {
+    padding-right: 0;
+    border-right: none;
+  }
+  .portfoilo-wrap .portfoilo-item .right-box {
+    padding-left: 0;
+  }
+  .portfoilo-wrap .portfoilo-item .img-box .img {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .contact-wrap {
+    text-align: center;
+  }
+  .contact-wrap .tit {
+    display: block;
+    font-size: 28px;
+    color: #040404;
+  }
+  .contact-wrap .mail {
+    font-size: 30px;
+    padding: 20px 0 30px;
+  }
+  .contact-wrap .mail::before {
+    top: 8px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

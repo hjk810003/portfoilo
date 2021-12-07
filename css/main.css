@@ -14,7 +14,7 @@
 .about-wrap .title-box {
   position: relative;
   width: 50%;
-  border-right: 1px solid #323232;
+  border-right: 1px solid #ddd;
   padding: 20px 5% 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -44,6 +44,8 @@
   width: 50%;
   padding-left: 5%;
   padding: 20px 0 15px 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .about-wrap .contents-box dl dt {
@@ -76,7 +78,7 @@
           justify-content: space-between;
 }
 
-.portfoilo-wrap .portfoilo-item:nth-child(n+2) {
+.portfoilo-wrap .portfoilo-item:nth-child(n + 2) {
   margin-top: 100px;
 }
 
@@ -126,7 +128,7 @@
 }
 
 .portfoilo-wrap .portfoilo-item .txt-box dl::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 15px;
   left: 0;
@@ -160,7 +162,7 @@
 .portfoilo-wrap .portfoilo-item .img-box .img {
   width: 100%;
   padding-top: 100%;
-  background: #f00;
+  background: #ddd;
   -webkit-box-shadow: 9px 5px 15px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 9px 5px 15px 1px rgba(0, 0, 0, 0.2);
   background-size: cover;
@@ -182,6 +184,7 @@
 
 .portfoilo-wrap .portfoilo-item .img-box .img.kca {
   background-image: url("/images/kca.png");
+  background-position-y: 8%;
 }
 
 .portfoilo-wrap .portfoilo-item .img-box .img.ikea {
@@ -215,7 +218,7 @@
 }
 
 .contact-wrap .mail::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   left: 50%;
@@ -236,25 +239,40 @@
 @media all and (max-width: 768px) {
   .about-wrap {
     display: block;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
   .about-wrap .title-box {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
+    padding: 20px 0 30px;
+    text-align: center;
+  }
+  .about-wrap .title-box strong {
+    font-size: 28px;
   }
   .about-wrap .title-box .btn-resume {
     position: static;
+    margin-top: 30px;
   }
   .about-wrap .contents-box {
     width: 100%;
     padding-left: 0;
   }
+  .about-wrap .contents-box dl dt {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .about-wrap .contents-box dl dd {
+    font-size: 14px;
+  }
+  .about-wrap .contents-box dl dd br {
+    display: none;
+  }
   .portfoilo-wrap {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
   .portfoilo-wrap .portfoilo-item {
     display: block;
@@ -273,24 +291,45 @@
   .portfoilo-wrap .portfoilo-item .right-box {
     padding-left: 0;
   }
+  .portfoilo-wrap .portfoilo-item .txt-box .tit-area .num {
+    font-size: 24px;
+  }
+  .portfoilo-wrap .portfoilo-item .txt-box .tit-area .tit {
+    margin-top: 10px;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+  }
+  .portfoilo-wrap .portfoilo-item .txt-box .tit-area .tit .category {
+    font-size: 14px;
+  }
+  .portfoilo-wrap .portfoilo-item .txt-box dl dt {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .portfoilo-wrap .portfoilo-item .txt-box dl dd {
+    font-size: 14px;
+  }
+  .portfoilo-wrap .portfoilo-item .txt-box .btn-process {
+    margin-top: 30px;
+  }
   .portfoilo-wrap .portfoilo-item .img-box .img {
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  .contact-wrap {
-    text-align: center;
-  }
   .contact-wrap .tit {
-    display: block;
-    font-size: 28px;
-    color: #040404;
+    font-size: 18px;
   }
   .contact-wrap .mail {
-    font-size: 30px;
-    padding: 20px 0 30px;
+    font-size: 26px;
+    padding: 20px 0 40px;
   }
   .contact-wrap .mail::before {
-    top: 8px;
+    top: 10px;
+    width: 10px;
+  }
+  .contact-wrap .text {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */

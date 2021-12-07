@@ -48,12 +48,13 @@
       </nav>
     </header>
 
-    <nav class="mobile-menu">
+    <div class="mobile-gnb-dim"></div>
+    <nav class="mobile-gnb-wrap">
       <div class="btn-menu">
         <span></span>
       </div>
 
-      <ul class="hide-menu">
+      <ul class="mobile-gnb">
         <li class="active">
           <a href="#Home">Home</a>
         </li>
@@ -77,48 +78,54 @@
         <div class="title">
           <h2>
             PORTFOLIO
-            <span>Web Publisher</span>
+            <span>KIM HYUN JUNG</span>
           </h2>
         </div>
       </div>
 
-      <div class="section" id="section1">
+      <div class="section section-gray" id="section1">
         <section class="about-wrap inner-wrap">
           <div class="title-box">
             <strong>
-              <span>#About me</span>
-              저의 능력에 대해 <br>소개할게요!
+              <span># Web Publisher</span>
+              <span class="point"># Kim Hyun Jung</span>
+              저에 대해 <br>소개할게요!
             </strong>
 
             <a href="https://apricot-composer-e98.notion.site/RESUME-9ccb43f375e840e2b6080f5aee6763f7" target="_blank"
               class="btn-resume btn-line">이력서 (링크)</a>
           </div>
           <div class="contents-box">
-            <dl>
-              <dt>UI Development</dt>
-              <dd>
-                웹 퍼블리싱 HTML, CSS, JS 을 빠삭하게 이해하며 잘 다룹니다. <br>
-                유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한 업무 프로세스를 지향합니다.
-              </dd>
-
-              <dt>Markup</dt>
-              <dd>
-                웹 접근성을 고려한 시멘틱 마크업 작성이 가능합니다. <br>
-                웹 표준을 준수한 반응형 레이아웃을 통해 웹의 가치를 향상시킵니다.
-              </dd>
-
-              <dt>Skill & Tool</dt>
-              <dd>
-                Photoshop, Illustrator, Xd 를 통한 디자인 작업이 가능하며, <br>
-                원활한 협업에 필요한 GitHub, Zeplin, Figma 등을 사용할 수 있습니다.
-              </dd>
-
-              <dt>Co-work</dt>
-              <dd>
-                디자이너, 개발자와 가깝게 일하며, 항상 원활한 협업을 끌어내려고 노력합니다. <br>
-                의도를 이해하고 존중하며 '함께' 좋은 결과물을 만듭니다.
-              </dd>
-            </dl>
+            <ul>
+              <li>
+                <strong>UI Development</strong>
+                <p>
+                  웹 퍼블리싱 HTML, CSS, JS를 자유롭게 다룹니다. <br>
+                  유지보수를 고려한 코드 작성, 협업을 위한 가이드 제작 등 탄탄한 업무 프로세스를 지향합니다.
+                </p>
+              </li>
+              <li>
+                <strong>Markup</strong>
+                <p>
+                  웹 접근성을 고려한 시멘틱 마크업 작성이 가능합니다. <br>
+                  웹 표준을 준수한 반응형 레이아웃을 통해 웹의 가치를 향상시킵니다.
+                </p>
+              </li>
+              <li>
+                <strong>Skill & Tool</strong>
+                <p>
+                  Photoshop, Illustrator, Xd 를 통한 디자인 작업이 가능하며, <br>
+                  원활한 협업에 필요한 GitHub, Zeplin, Figma 등을 사용할 수 있습니다.
+                </p>
+              </li>
+              <li>
+                <strong>Co-work</strong>
+                <p>
+                  디자이너, 개발자와 가깝게 일하며, 항상 원활한 협업을 끌어내려고 노력합니다. <br>
+                  의도를 이해하고 존중하며 '함께' 좋은 결과물을 만듭니다.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
@@ -354,8 +361,9 @@
   });
 
   $(".btn-menu").click(function () {
-    $('.btn-menu').toggleClass("active");
-    $(".hide-menu").toggleClass("show");
+    $(".btn-menu").toggleClass("active");
+    $(".mobile-gnb").toggleClass("show");
+    $(".mobile-gnb-dim").toggleClass("active");
   });
 
 

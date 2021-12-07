@@ -4,17 +4,23 @@ $pink: #f2afa3;
 
 .section {
   min-height: 100vh;
+
+  &.section-gray {
+    background-color: #fafafa;
+  }
 }
 
 .about-wrap {
   display: flex;
   justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   .title-box {
     position: relative;
     width: 50%;
     border-right: 1px solid #ddd;
-    padding: 20px 5% 0 0;
+    padding-right: 5%;
     box-sizing: border-box;
 
     strong {
@@ -22,11 +28,18 @@ $pink: #f2afa3;
       font-size: 32px;
       font-weight: 500;
       color: #323232;
-      line-height: 45px;
+      line-height: 50px;
 
       span {
         display: block;
         color: $blue;
+        font-size: 24px;
+        line-height: 32px;
+
+        &.point {
+          margin-bottom: 10px;
+          color: #192d9a;
+        }
       }
     }
 
@@ -41,41 +54,57 @@ $pink: #f2afa3;
   .contents-box {
     width: 50%;
     padding-left: 5%;
-    padding: 20px 0 15px 5%;
     box-sizing: border-box;
 
-    dl {
-      dt {
-        font-size: 18px;
-        font-weight: 500;
-        color: #323232;
-        line-height: 28px;
+    ul {
+      li{
+        position: relative;
+        padding-left: 30px;
 
         &:nth-child(n + 2) {
-          margin-top: 20px;
+          margin-top: 30px;
         }
-      }
 
-      dd {
-        margin-top: 5px;
-        font-size: 16px;
-        color: #323232;
-        line-height: 24px;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 6px;
+          width: 14px;
+          height: 14px;
+          background: url("/images/icon-checkmark.png") no-repeat center;
+          background-size: 100%;
+        }
+
+        strong {
+          font-size: 18px;
+          font-weight: 500;
+          color: $black;
+          line-height: 28px;
+        }
+
+        p {
+          margin-top: 5px;
+          font-size: 16px;
+          color: #323232;
+          line-height: 24px;
+        }
       }
     }
   }
 }
 
 .portfoilo-wrap {
-  padding-top: 100px;
-  padding-bottom: 100px;
-
   .portfoilo-item {
     display: block;
     justify-content: space-between;
+    padding: 60px 0;
 
-    &:nth-child(n + 2) {
-      margin-top: 100px;
+    &:first-child {
+      padding-top: 100px;
+    }
+    &:last-child {
+      padding-bottom: 100px;
     }
 
     > div {
@@ -235,41 +264,46 @@ $pink: #f2afa3;
 @media all and (max-width: 768px) {
   .about-wrap {
     display: block;
-    padding-top: 75px;
-    padding-bottom: 75px;
 
     .title-box {
       width: 100%;
       border-right: none;
       border-bottom: 1px solid #ddd;
-      padding: 20px 0 30px;
+      padding: 0 0 50px;
       text-align: center;
 
       strong {
         font-size: 28px;
+        line-height: 45px;
       }
 
       .btn-resume {
         position: static;
-        margin-top: 30px;
+        margin-top: 40px;
       }
     }
 
     .contents-box {
       width: 100%;
-      padding-left: 0;
+      padding: 50px 0 0;
 
-      dl {
-        dt {
-          font-size: 16px;
-          line-height: 24px;
-        }
+      ul {
+        li {
+          &::before {
+            top: 4px;
+          }
+
+          strong {
+            font-size: 16px;
+            line-height: 24px;
+          }
+    
+          p {
+            font-size: 14px;
   
-        dd {
-          font-size: 14px;
-
-          br {
-            display: none;
+            br {
+              display: none;
+            }
           }
         }
       }
@@ -277,11 +311,20 @@ $pink: #f2afa3;
   }
 
   .portfoilo-wrap {
-    padding-top: 75px;
-    padding-bottom: 75px;
-
     .portfoilo-item {
       display: block;
+      position: relative;
+      padding: 50px 0;
+
+      &:nth-child(2n)::before {
+        content: '';
+        position: absolute;
+        left: -500px;
+        top: 0;
+        width: 2000px;
+        height: 100%;
+        background-color: #fafafa;
+      }
 
       > div {
         position: relative;
@@ -339,6 +382,7 @@ $pink: #f2afa3;
         .img {
           -webkit-box-shadow: none;
           box-shadow: none;
+          border: 1px solid #f5f5f5;
         }
       }
     }

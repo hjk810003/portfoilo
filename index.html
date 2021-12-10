@@ -12,7 +12,7 @@
 	<meta name="keywords" content="퍼블리셔,웹퍼블리셔,포트폴리오,이력서">
 
   <script src="/js/common/jquery-3.6.0.min.js"></script>
-  <script src="/js/lib/scrolloverflow.min.js"></script>
+  <script src="/js/lib/scrolloverflow.js"></script>
   <script src="/js/lib/jquery.fullpage.min.js"></script>
 
   <link rel="stylesheet" href="/styles/common/reset.css">
@@ -360,11 +360,25 @@
     },
   });
 
+  /* 모바일 메뉴 */
   $(".btn-menu").click(function () {
     $(".btn-menu").toggleClass("active");
     $(".mobile-gnb").toggleClass("show");
     $(".mobile-gnb-dim").toggleClass("active");
   });
+
+  $(".mobile-gnb-dim").click(function () {
+    $(".btn-menu").removeClass("active");
+    $(".mobile-gnb").removeClass("show");
+    $(".mobile-gnb-dim").removeClass("active");
+  })
+
+  $(".mobile-gnb>li").click(function () {
+    $(".btn-menu").removeClass("active");
+    $(".mobile-gnb").removeClass("show");
+    $(".mobile-gnb-dim").removeClass("active");
+  })
+  /* //모바일 메뉴 */
 
 
 </script>

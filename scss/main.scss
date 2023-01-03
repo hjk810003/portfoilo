@@ -95,17 +95,12 @@ $pink: #f2afa3;
 }
 
 .portfoilo-wrap {
+  padding: 60px 16px;
+
   .portfoilo-item {
     display: block;
     justify-content: space-between;
     padding: 60px 0;
-
-    &:first-child {
-      padding-top: 100px;
-    }
-    &:last-child {
-      padding-bottom: 100px;
-    }
 
     > div {
       position: relative;
@@ -139,12 +134,15 @@ $pink: #f2afa3;
           font-size: 32px;
           line-height: 36px;
           font-weight: 500;
+          letter-spacing: -0.8px;
+          word-break: keep-all;
           color: $black;
 
           .category {
             display: block;
             font-size: 16px;
             font-weight: 300;
+            letter-spacing: 1px;
           }
         }
       }
@@ -198,6 +196,12 @@ $pink: #f2afa3;
         background-repeat: no-repeat;
         background-position: top 0 left 50%;
 
+        &.wireline {
+          background-image: url("/images/wireline.png");
+        }
+        &.esim {
+          background-image: url("/images/esim.png");
+        }
         &.daelim {
           background-image: url("/images/daelim.png");
         }
@@ -222,6 +226,11 @@ $pink: #f2afa3;
         }
       }
     }
+  }
+
+  .veiw-more-area {
+    text-align: center;
+    margin: 100px auto 50px;
   }
 }
 
@@ -353,8 +362,7 @@ $pink: #f2afa3;
           .tit {
             margin-top: 10px;
             font-size: 28px;
-            line-height: 32px;
-            letter-spacing: -0.5px;
+            line-height: 34px;
   
             .category {
               font-size: 14px;
@@ -385,6 +393,10 @@ $pink: #f2afa3;
           border: 1px solid #f5f5f5;
         }
       }
+    }
+
+    .veiw-more-area {
+      margin: 70px auto 0;
     }
   }
 

@@ -268,8 +268,9 @@ h1 {
 .btn-line {
   position: relative;
   display: inline-block;
-  padding: 15px 25px;
-  text-align: left;
+  min-width: 150px;
+  padding: 15px 0;
+  text-align: center;
   border: none;
   box-sizing: border-box;
   background: #e8e8e8;
@@ -350,7 +351,8 @@ footer {
   }
 
   .btn-line {
-    padding: 12px 22px;
+    min-width: 120px;
+    padding: 12px 0;
     font-size: 14px;
   }
 }

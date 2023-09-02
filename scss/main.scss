@@ -72,7 +72,7 @@ $pink: #f2afa3;
           top: 6px;
           width: 14px;
           height: 14px;
-          background: url("/images/icon-checkmark.png") no-repeat center;
+          background: url("../images/icon-checkmark.png") no-repeat center;
           background-size: 100%;
         }
 
@@ -197,29 +197,29 @@ $pink: #f2afa3;
         background-position: top 0 left 50%;
 
         &.wireline {
-          background-image: url("/images/wireline.png");
+          background-image: url("../images/wireline.png");
         }
         &.esim {
-          background-image: url("/images/esim.png");
+          background-image: url("../images/esim.png");
         }
         &.daelim {
-          background-image: url("/images/daelim.png");
+          background-image: url("../images/daelim.png");
         }
         &.gtec {
-          background-image: url("/images/gtec.png");
+          background-image: url("../images/gtec.png");
         }
         &.inha {
-          background-image: url("/images/inha.png");
+          background-image: url("../images/inha.png");
         }
         &.kca {
-          background-image: url("/images/kca.png");
+          background-image: url("../images/kca.png");
           background-position-y: 8%;
         }
         &.ikea {
-          background-image: url("/images/ikea.png");
+          background-image: url("../images/ikea.png");
         }
         &.zooCoffee {
-          background-image: url("/images/zoocoffee.png");
+          background-image: url("../images/zoocoffee.png");
         }
         img {
           max-width: 100%;

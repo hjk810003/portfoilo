@@ -3,35 +3,21 @@
   * layout.css 
     - header 및 footer 등 다른 페이지에서도 공통으로 사용하는 layout css 적용
 */
-@-webkit-keyframes drift {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 @keyframes drift {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 .inner-wrap {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   position: relative;
   padding: 0 16px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header {
@@ -42,38 +28,26 @@ header {
   z-index: 1;
   background: rgba(255, 255, 255, 0.3);
 }
-
 header nav {
   height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
 }
-
 header nav ul li {
   float: left;
 }
-
 header nav ul li + li {
   margin-left: 80px;
 }
-
 header nav ul li a {
   font-size: 18px;
   font-weight: bold;
   color: #040404;
 }
-
 header nav ul li:hover a {
   color: #455de0;
 }
-
 header nav ul li.active a {
   color: #455de0;
 }
@@ -90,7 +64,6 @@ header nav ul li.active a {
   opacity: 0.7;
   filter: alpha(opaicty=80);
 }
-
 .mobile-gnb-dim.active {
   display: block;
 }
@@ -104,23 +77,19 @@ header nav ul li.active a {
   margin: 0;
   z-index: 1000;
 }
-
 .mobile-gnb-wrap .btn-menu {
   position: fixed;
   width: 50px;
   height: 50px;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
   z-index: 1002;
   top: 25px;
   right: 25px;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
-
 .mobile-gnb-wrap .btn-menu span {
   width: 22px;
   height: 2px;
@@ -128,10 +97,8 @@ header nav ul li.active a {
   background-color: #455de0;
   margin: 16px auto 0px;
   position: relative;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 .mobile-gnb-wrap .btn-menu span:before {
   content: "";
   position: absolute;
@@ -140,10 +107,8 @@ header nav ul li.active a {
   top: 8px;
   left: 0;
   background-color: #455de0;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 .mobile-gnb-wrap .btn-menu span:after {
   content: "";
   position: absolute;
@@ -153,11 +118,9 @@ header nav ul li.active a {
   left: 0;
   background-color: #455de0;
 }
-
 .mobile-gnb-wrap .btn-menu.active {
   background-color: #f2afa3;
 }
-
 .mobile-gnb-wrap .btn-menu.active span {
   background-color: #fff;
   margin: 24px auto 0px;
@@ -165,7 +128,6 @@ header nav ul li.active a {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
 }
-
 .mobile-gnb-wrap .btn-menu.active span:before {
   background-color: #fff;
   margin: -8px auto 0px;
@@ -173,11 +135,9 @@ header nav ul li.active a {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
 }
-
 .mobile-gnb-wrap .btn-menu.active span:after {
   display: none;
 }
-
 .mobile-gnb-wrap .mobile-gnb {
   position: fixed;
   padding: 120px 40px 0;
@@ -189,19 +149,15 @@ header nav ul li.active a {
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   right: -100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .mobile-gnb-wrap .mobile-gnb li + li {
   margin-top: 30px;
 }
-
 .mobile-gnb-wrap .mobile-gnb li a {
   font-size: 24px;
   color: #455de0;
 }
-
 .mobile-gnb-wrap .mobile-gnb.show {
   right: 0;
 }
@@ -211,10 +167,8 @@ header nav ul li.active a {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
 .box:after {
   content: "";
   display: block;
@@ -222,13 +176,10 @@ header nav ul li.active a {
   top: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ee88aa), color-stop(80%, rgba(221, 238, 255, 0)), to(rgba(255, 255, 255, 0.5)));
   background: linear-gradient(to bottom, #ee88aa, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
   z-index: 11;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
 .box .wave {
   opacity: 0.4;
   position: absolute;
@@ -239,23 +190,17 @@ header nav ul li.active a {
   height: 460px;
   margin-left: -230px;
   margin-top: -230px;
-  -webkit-transform-origin: 50% 48%;
-          transform-origin: 50% 48%;
+  transform-origin: 50% 48%;
   border-radius: 43%;
-  -webkit-animation: drift 3000ms infinite linear;
-          animation: drift 3000ms infinite linear;
+  animation: drift 3000ms infinite linear;
 }
-
 .box .wave.two {
-  -webkit-animation: drift 7000ms infinite linear;
-          animation: drift 7000ms infinite linear;
+  animation: drift 7000ms infinite linear;
   opacity: 0.1;
   background: #ff79ed;
 }
-
 .box .wave.three {
-  -webkit-animation: drift 5000ms infinite linear;
-          animation: drift 5000ms infinite linear;
+  animation: drift 5000ms infinite linear;
   background: #007bff;
 }
 
@@ -268,32 +213,23 @@ h1 {
   color: #040404;
   opacity: 0.7;
   z-index: 2;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .title {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   text-align: center;
   color: #fff;
 }
-
 .title h2 {
   font-size: 55px;
   line-height: 60px;
   font-family: "Playfair Display", serif;
 }
-
 .title span {
   display: block;
   font-size: 16px;
@@ -308,26 +244,20 @@ h1 {
   padding: 15px 0;
   text-align: center;
   border: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: #e8e8e8;
-  -webkit-transition: 500ms ease all;
   transition: 500ms ease all;
   color: #040404;
   font-weight: 500;
 }
-
 .btn-line:hover {
   background: transparent;
   color: #455de0;
 }
-
 .btn-line:hover:before, .btn-line:hover:after {
   width: 100%;
-  -webkit-transition: 500ms ease all;
   transition: 500ms ease all;
 }
-
 .btn-line:before, .btn-line:after {
   content: "";
   position: absolute;
@@ -336,10 +266,8 @@ h1 {
   height: 2px;
   width: 0;
   background: #455de0;
-  -webkit-transition: 300ms ease all;
   transition: 300ms ease all;
 }
-
 .btn-line:after {
   right: inherit;
   top: inherit;
@@ -355,7 +283,6 @@ footer {
   padding: 20px 0;
   text-align: right;
 }
-
 footer .copyright {
   font-size: 16px;
   color: #ddd;
@@ -366,8 +293,7 @@ footer .copyright {
   h1 {
     top: 25px;
     left: 16px;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   .title h2 {
     font-size: 45px;
@@ -387,5 +313,4 @@ footer .copyright {
     padding: 12px 0;
     font-size: 14px;
   }
-}
-/*# sourceMappingURL=layout.css.map */
+}/*# sourceMappingURL=layout.css.map */

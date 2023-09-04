@@ -16,7 +16,6 @@
   overflow: hidden;
   white-space: nowrap;
 }
-
 .a .b {
   width: 100px;
 }
@@ -24,12 +23,9 @@
 .a {
   width: 199px;
 }
-
 .a.b {
   width: 100px;
 }
-
 .a:nth-child(1) {
   color: #000;
-}
-/*# sourceMappingURL=example.css.map */
+}/*# sourceMappingURL=example.css.map */

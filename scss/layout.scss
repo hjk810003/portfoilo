@@ -4,6 +4,7 @@
 */
 
 $black: #040404;
+$gray: #a5a5a5;
 $blue: #455de0;
 $pink: #f2afa3;
 
@@ -18,29 +19,28 @@ $pink: #f2afa3;
 
 // header, section, footer > .inner (공통)
 .inner {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
   position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 16px;
   box-sizing: border-box;
 }
 
 // h1.anchor
 .anchor {
-  position: fixed;
-  top: 40px;
-  left: 16px;
-  font-size: 16px;
-  font-weight: 300;
-  color: $black;
-  opacity: 0.7;
-  z-index: 2;
-  transform: rotate(90deg);
-  @media all and (max-width: 768px) {
+  display: none;
+
+  @media all and (max-width: 900px) {
+    display: block;
+    position: fixed;
     top: 25px;
     left: 16px;
-    transform: rotate(0);
+    font-size: 16px;
+    font-weight: 300;
+    color: $gray;
+    opacity: 0.7;
+    z-index: 2;
   }
 }
 
@@ -52,7 +52,7 @@ header {
   width: 100%;
   z-index: 1;
   background: rgba(255, 255, 255, 0.3);
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 900px) {
     display: none;
   }
 
@@ -107,7 +107,7 @@ header {
   top: 0;
   margin: 0;
   z-index: 1000;
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 900px) {
     display: block;
   }
 
@@ -183,7 +183,7 @@ header {
   .mobile-gnb {
     position: fixed;
     padding: 120px 40px 0;
-    width: 60%;
+    width: 70%;
     height: 100vh;
     background-color: #fafafa;
     z-index: 1001;
@@ -195,7 +195,7 @@ header {
 
     li {
       & + li {
-        margin-top: 30px;
+        margin-top: 35px;
       }
 
       a {
@@ -223,7 +223,7 @@ header {
   transition: 500ms ease all;
   color: $black;
   font-weight: 500;
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 900px) {
     min-width: 120px;
     padding: 12px 0;
     font-size: 14px;
@@ -258,6 +258,11 @@ header {
     left: 0;
     bottom: 0;
   }
+}
+
+.btn-area {
+  margin: auto;
+  text-align: center;
 }
 
 // footer

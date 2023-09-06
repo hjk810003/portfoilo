@@ -56,7 +56,7 @@
   line-height: 60px;
   font-family: "Playfair Display", serif;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.home .title h2 {
     font-size: 45px;
     line-height: 50px;
@@ -68,7 +68,7 @@
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   font-weight: 300;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.home .title span {
     font-size: 16px;
   }
@@ -79,74 +79,77 @@
 .section.aboutme .inner {
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.aboutme .inner {
-    display: block;
+    flex-direction: column;
+    padding: 100px 16px;
   }
 }
 .section.aboutme .inner .title-box {
+  display: flex;
   position: relative;
-  width: 50%;
-  border-right: 1px solid #ddd;
-  padding-right: 5%;
-  box-sizing: border-box;
+  max-width: 460px;
+  padding-right: 20px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.aboutme .inner .title-box {
     width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-    padding: 0 0 50px;
-    text-align: center;
+    max-width: none;
+    padding-right: 0;
   }
 }
-.section.aboutme .inner .title-box strong {
-  display: block;
-  font-size: 32px;
-  font-weight: 400;
-  color: #323232;
-  line-height: 50px;
+.section.aboutme .inner .title-box img {
+  width: 200px;
+  height: 200px;
+  margin-left: -30px;
 }
-@media all and (max-width: 768px) {
-  .section.aboutme .inner .title-box strong {
-    font-size: 28px;
-    line-height: 45px;
+@media all and (max-width: 900px) {
+  .section.aboutme .inner .title-box img {
+    width: 160px;
+    height: 160px;
   }
 }
-.section.aboutme .inner .title-box strong span {
+.section.aboutme .inner .title-box .text-area {
+  padding-top: 30px;
+}
+.section.aboutme .inner .title-box .text-area .title {
   display: block;
-  color: #455de0;
+  padding-bottom: 10px;
   font-size: 24px;
-  line-height: 32px;
+  font-weight: 500;
+  color: #323232;
+  line-height: 1.2;
 }
-.section.aboutme .inner .title-box strong span.point {
-  margin-bottom: 10px;
-  color: #192d9a;
+@media all and (max-width: 900px) {
+  .section.aboutme .inner .title-box .text-area .title {
+    font-size: 18px;
+  }
 }
-.section.aboutme .inner .title-box .btn-resume {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  margin-top: 20px;
+.section.aboutme .inner .title-box .text-area .tag {
+  display: inline-block;
+  margin: 0 3px 6px 0;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  background: #aab6c1;
+  border-radius: 10px;
+  opacity: 0.7;
 }
-@media all and (max-width: 768px) {
-  .section.aboutme .inner .title-box .btn-resume {
-    position: relative;
-    margin-top: 40px;
+@media all and (max-width: 900px) {
+  .section.aboutme .inner .title-box .text-area .tag {
+    font-size: 12px;
   }
 }
 .section.aboutme .inner .contents-box {
-  width: 50%;
-  padding-left: 5%;
-  box-sizing: border-box;
+  padding-left: 60px;
+  border-left: 1px solid #ddd;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.aboutme .inner .contents-box {
     width: 100%;
-    padding: 50px 0 0;
+    border: none;
+    padding: 20px 0 0;
   }
 }
 .section.aboutme .inner .contents-box ul li {
@@ -166,7 +169,7 @@
   background: url("../images/icon-checkmark.png") no-repeat center;
   background-size: 100%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.aboutme .inner .contents-box ul li::before {
     top: 4px;
   }
@@ -177,7 +180,7 @@
   color: #040404;
   line-height: 28px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.aboutme .inner .contents-box ul li strong {
     font-size: 16px;
     line-height: 24px;
@@ -189,7 +192,7 @@
   color: #323232;
   line-height: 24px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.aboutme .inner .contents-box ul li p {
     font-size: 14px;
   }
@@ -197,28 +200,49 @@
     display: none;
   }
 }
+.section.aboutme .inner .btn-resume {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+@media all and (max-width: 900px) {
+  .section.aboutme .inner .btn-resume {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 120px;
+    margin-top: 50px;
+  }
+}
 .section.portfoilo .inner {
-  padding: 60px 16px;
+  padding: 50px 16px;
 }
 .section.portfoilo .inner .portfoilo-item {
   display: block;
+  position: relative;
   justify-content: space-between;
   padding: 60px 0;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.portfoilo .inner .portfoilo-item {
     display: block;
     position: relative;
     padding: 50px 0;
   }
-  .section.portfoilo .inner .portfoilo-item:nth-child(2n)::before {
-    content: "";
-    position: absolute;
-    left: -500px;
-    top: 0;
-    width: 2000px;
-    height: 100%;
-    background-color: #fafafa;
+}
+.section.portfoilo .inner .portfoilo-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 90%;
+  background: #f5f5f5;
+}
+@media all and (max-width: 900px) {
+  .section.portfoilo .inner .portfoilo-item::before {
+    display: none;
   }
 }
 .section.portfoilo .inner .portfoilo-item > div {
@@ -226,33 +250,21 @@
   width: 50%;
   box-sizing: border-box;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.portfoilo .inner .portfoilo-item > div {
-    position: relative;
     width: 100%;
   }
   .section.portfoilo .inner .portfoilo-item > div + div {
     margin-top: 30px;
   }
 }
-.section.portfoilo .inner .portfoilo-item .left-box {
+.section.portfoilo .inner .portfoilo-item .txt-box {
   float: left;
   padding-right: 5%;
-  border-right: 1px solid #ddd;
 }
-@media all and (max-width: 768px) {
-  .section.portfoilo .inner .portfoilo-item .left-box {
+@media all and (max-width: 900px) {
+  .section.portfoilo .inner .portfoilo-item .txt-box {
     padding-right: 0;
-    border-right: none;
-  }
-}
-.section.portfoilo .inner .portfoilo-item .right-box {
-  float: right;
-  padding-left: 5%;
-}
-@media all and (max-width: 768px) {
-  .section.portfoilo .inner .portfoilo-item .right-box {
-    padding-left: 0;
   }
 }
 .section.portfoilo .inner .portfoilo-item .txt-box .tit-area .num {
@@ -261,7 +273,7 @@
   color: #f2afa3;
   font-weight: 500;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.portfoilo .inner .portfoilo-item .txt-box .tit-area .num {
     font-size: 24px;
   }
@@ -276,7 +288,7 @@
   word-break: keep-all;
   color: #040404;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.portfoilo .inner .portfoilo-item .txt-box .tit-area .tit {
     margin-top: 10px;
     font-size: 28px;
@@ -288,8 +300,9 @@
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 1px;
+  color: #a5a5a5;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.portfoilo .inner .portfoilo-item .txt-box .tit-area .tit .category {
     font-size: 14px;
   }
@@ -309,14 +322,13 @@
 }
 .section.portfoilo .inner .portfoilo-item .txt-box dl dt {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: #323232;
-  line-height: 28px;
+  line-height: 1.2;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.portfoilo .inner .portfoilo-item .txt-box dl dt {
     font-size: 16px;
-    line-height: 24px;
   }
 }
 .section.portfoilo .inner .portfoilo-item .txt-box dl dt:nth-child(n+2) {
@@ -325,10 +337,10 @@
 .section.portfoilo .inner .portfoilo-item .txt-box dl dd {
   margin-top: 5px;
   font-size: 16px;
-  color: #323232;
+  color: #4e4e4e;
   line-height: 24px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.portfoilo .inner .portfoilo-item .txt-box dl dd {
     font-size: 14px;
   }
@@ -336,9 +348,13 @@
 .section.portfoilo .inner .portfoilo-item .txt-box .btn-process {
   margin-top: 50px;
 }
-@media all and (max-width: 768px) {
-  .section.portfoilo .inner .portfoilo-item .txt-box .btn-process {
-    margin-top: 30px;
+.section.portfoilo .inner .portfoilo-item .img-box {
+  float: right;
+  padding-left: 5%;
+}
+@media all and (max-width: 900px) {
+  .section.portfoilo .inner .portfoilo-item .img-box {
+    padding-left: 0;
   }
 }
 .section.portfoilo .inner .portfoilo-item .img-box .img {
@@ -350,24 +366,27 @@
   background-repeat: no-repeat;
   background-position: top 0 left 50%;
 }
-.section.portfoilo .inner .portfoilo-item .img-box .img.wireline {
-  background-image: url("../images/wireline.png");
+.section.portfoilo .inner .portfoilo-item .img-box .img.tworld {
+  background-image: url("../images/tworld.png");
 }
 .section.portfoilo .inner .portfoilo-item .img-box .img.esim {
   background-image: url("../images/esim.png");
 }
-.section.portfoilo .inner .portfoilo-item .img-box .img.daelim {
-  background-image: url("../images/daelim.png");
-}
-.section.portfoilo .inner .portfoilo-item .img-box .img.gtec {
-  background-image: url("../images/gtec.png");
-}
-.section.portfoilo .inner .portfoilo-item .img-box .img.inha {
-  background-image: url("../images/inha.png");
+.section.portfoilo .inner .portfoilo-item .img-box .img.wireline {
+  background-image: url("../images/wireline.png");
 }
 .section.portfoilo .inner .portfoilo-item .img-box .img.kca {
   background-image: url("../images/kca.png");
   background-position-y: 8%;
+}
+.section.portfoilo .inner .portfoilo-item .img-box .img.inha {
+  background-image: url("../images/inha.png");
+}
+.section.portfoilo .inner .portfoilo-item .img-box .img.gtec {
+  background-image: url("../images/gtec.png");
+}
+.section.portfoilo .inner .portfoilo-item .img-box .img.daelim {
+  background-image: url("../images/daelim.png");
 }
 .section.portfoilo .inner .portfoilo-item .img-box .img.ikea {
   background-image: url("../images/ikea.png");
@@ -375,7 +394,7 @@
 .section.portfoilo .inner .portfoilo-item .img-box .img.zooCoffee {
   background-image: url("../images/zoocoffee.png");
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.portfoilo .inner .portfoilo-item .img-box .img {
     box-shadow: none;
     border: 1px solid #f5f5f5;
@@ -384,12 +403,36 @@
 .section.portfoilo .inner .portfoilo-item .img-box .img img {
   max-width: 100%;
 }
-.section.portfoilo .inner .veiw-more-area {
-  text-align: center;
+@media all and (max-width: 900px) {
+  .section.portfoilo .inner .portfoilo-item:nth-child(2n) {
+    margin: 0 -16px;
+    padding: 50px 16px;
+    background-color: #fafafa;
+  }
+}
+.section.portfoilo .inner .portfoilo-item:nth-child(2n) .txt-box {
+  float: right;
+  padding-left: 5%;
+}
+@media all and (max-width: 900px) {
+  .section.portfoilo .inner .portfoilo-item:nth-child(2n) .txt-box {
+    padding-left: 0;
+  }
+}
+.section.portfoilo .inner .portfoilo-item:nth-child(2n) .img-box {
+  float: left;
+  padding-right: 5%;
+}
+@media all and (max-width: 900px) {
+  .section.portfoilo .inner .portfoilo-item:nth-child(2n) .img-box {
+    padding-right: 0;
+  }
+}
+.section.portfoilo .inner .btn-area {
   margin: 100px auto 50px;
 }
-@media all and (max-width: 768px) {
-  .section.portfoilo .inner .veiw-more-area {
+@media all and (max-width: 900px) {
+  .section.portfoilo .inner .btn-area {
     margin: 70px auto 0;
   }
 }
@@ -401,7 +444,7 @@
   font-size: 28px;
   color: #040404;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.contact .inner .tit {
     font-size: 18px;
   }
@@ -413,7 +456,7 @@
   font-size: 60px;
   color: #040404;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.contact .inner .mail {
     font-size: 26px;
     padding: 20px 0 40px;
@@ -429,7 +472,7 @@
   background: #455de0;
   transform: translateX(-50%);
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.contact .inner .mail::before {
     top: 10px;
     width: 10px;
@@ -441,7 +484,7 @@
   font-weight: 300;
   color: #323232;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .section.contact .inner .text {
     font-size: 20px;
   }

@@ -64,7 +64,7 @@ $pink: #f2afa3;
         font-size: 55px;
         line-height: 60px;
         font-family: "Playfair Display", serif;
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 900px) {
           font-size: 45px;
           line-height: 50px;
         }
@@ -75,7 +75,7 @@ $pink: #f2afa3;
         font-size: 16px;
         font-family: "Roboto", "Noto Sans KR", sans-serif;
         font-weight: 300;
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 900px) {
           font-size: 16px;
         }
       }
@@ -89,69 +89,69 @@ $pink: #f2afa3;
     .inner {
       display: flex;
       justify-content: space-between;
-      padding-top: 100px;
-      padding-bottom: 100px;
-      @media all and (max-width: 768px) {
-        display: block;
+      @media all and (max-width: 900px) {
+        flex-direction: column;
+        padding: 100px 16px;
       }
     
       .title-box {
+        display: flex;
         position: relative;
-        width: 50%;
-        border-right: 1px solid #ddd;
-        padding-right: 5%;
-        box-sizing: border-box;
-        @media all and (max-width: 768px) {
+        max-width: 460px;
+        padding-right: 20px;
+        @media all and (max-width: 900px) {
           width: 100%;
-          border-right: none;
-          border-bottom: 1px solid #ddd;
-          padding: 0 0 50px;
-          text-align: center;
+          max-width: none;
+          padding-right: 0;
+        }
+
+        img {
+          width: 200px;
+          height: 200px;
+          margin-left: -30px;
+          @media all and (max-width: 900px) {
+            width: 160px;
+            height: 160px;
+          }
         }
     
-        strong {
-          display: block;
-          font-size: 32px;
-          font-weight: 400;
-          color: #323232;
-          line-height: 50px;
-          @media all and (max-width: 768px) {
-            font-size: 28px;
-            line-height: 45px;
-          }
-    
-          span {
+        .text-area {
+          padding-top: 30px;
+          .title {
             display: block;
-            color: $blue;
+            padding-bottom: 10px;
             font-size: 24px;
-            line-height: 32px;
-    
-            &.point {
-              margin-bottom: 10px;
-              color: #192d9a;
+            font-weight: 500;
+            color: #323232;
+            line-height: 1.2;
+            @media all and (max-width: 900px) {
+              font-size: 18px;
             }
           }
-        }
-    
-        .btn-resume {
-          position: absolute;
-          bottom: 15px;
-          left: 0;
-          margin-top: 20px;
-          @media all and (max-width: 768px) {
-            position: relative;
-            margin-top: 40px;
+  
+          .tag {
+            display: inline-block;
+            margin: 0 3px 6px 0;
+            padding: 5px 10px;
+            font-size: 14px;
+            color: #fff;
+            background: #aab6c1;
+            border-radius: 10px;
+            opacity: 0.7;
+            @media all and (max-width: 900px) {
+              font-size: 12px;
+            }
           }
         }
       }
     
       .contents-box {
-        width: 50%;
-        padding-left: 5%;
-        box-sizing: border-box;
-        @media all and (max-width: 768px) {
+        padding-left: 60px;
+        border-left: 1px solid #ddd;
+        @media all and (max-width: 900px) {
           width: 100%;
-          padding: 50px 0 0;
+          border: none;
+          padding: 20px 0 0;
         }
     
         ul {
@@ -172,7 +172,7 @@ $pink: #f2afa3;
               height: 14px;
               background: url("../images/icon-checkmark.png") no-repeat center;
               background-size: 100%;
-              @media all and (max-width: 768px) {
+              @media all and (max-width: 900px) {
                 top: 4px;
               }
             }
@@ -182,7 +182,7 @@ $pink: #f2afa3;
               font-weight: 500;
               color: $black;
               line-height: 28px;
-              @media all and (max-width: 768px) {
+              @media all and (max-width: 900px) {
                 font-size: 16px;
                 line-height: 24px;
               }
@@ -193,7 +193,7 @@ $pink: #f2afa3;
               font-size: 16px;
               color: #323232;
               line-height: 24px;
-              @media all and (max-width: 768px) {
+              @media all and (max-width: 900px) {
                 font-size: 14px;
       
                 br {
@@ -204,31 +204,49 @@ $pink: #f2afa3;
           }
         }
       }
+
+      .btn-resume {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        @media all and (max-width: 900px) {
+          position: relative;
+          bottom: auto;
+          left: auto;
+          width: 120px;
+          margin-top: 50px;
+        }
+      }
     }
   }
 
   // section.portfoilo
   &.portfoilo {
     .inner {
-      padding: 60px 16px;
+      padding: 50px 16px;
     
       .portfoilo-item {
         display: block;
+        position: relative;
         justify-content: space-between;
         padding: 60px 0;
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 900px) {
           display: block;
           position: relative;
           padding: 50px 0;
-          
-          &:nth-child(2n)::before {
-            content: '';
-            position: absolute;
-            left: -500px;
-            top: 0;
-            width: 2000px;
-            height: 100%;
-            background-color: #fafafa;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 90%;
+          background: #f5f5f5;
+          @media all and (max-width: 900px) {
+            display: none;
           }
         }
     
@@ -236,8 +254,7 @@ $pink: #f2afa3;
           position: relative;
           width: 50%;
           box-sizing: border-box;
-          @media all and (max-width: 768px) {
-            position: relative;
+          @media all and (max-width: 900px) {
             width: 100%;
     
             & + div {
@@ -246,32 +263,20 @@ $pink: #f2afa3;
           }
         }
     
-        .left-box {
+        .txt-box {
           float: left;
           padding-right: 5%;
-          border-right: 1px solid #ddd;
-          @media all and (max-width: 768px) {
+          @media all and (max-width: 900px) {
             padding-right: 0;
-            border-right: none;
           }
-        }
-    
-        .right-box {
-          float: right;
-          padding-left: 5%;
-          @media all and (max-width: 768px) {
-            padding-left: 0;
-          }
-        }
-    
-        .txt-box {
+
           .tit-area {
             .num {
               display: block;
               font-size: 32px;
               color: $pink;
               font-weight: 500;
-              @media all and (max-width: 768px) {
+              @media all and (max-width: 900px) {
                 font-size: 24px;
               }
             }
@@ -285,7 +290,7 @@ $pink: #f2afa3;
               letter-spacing: -0.8px;
               word-break: keep-all;
               color: $black;
-              @media all and (max-width: 768px) {
+              @media all and (max-width: 900px) {
                 margin-top: 10px;
                 font-size: 28px;
                 line-height: 34px;
@@ -296,7 +301,8 @@ $pink: #f2afa3;
                 font-size: 16px;
                 font-weight: 300;
                 letter-spacing: 1px;
-                @media all and (max-width: 768px) {
+                color: #a5a5a5;
+                @media all and (max-width: 900px) {
                   font-size: 14px;
                 }
               }
@@ -319,12 +325,11 @@ $pink: #f2afa3;
     
             dt {
               font-size: 18px;
-              font-weight: 500;
+              font-weight: 400;
               color: #323232;
-              line-height: 28px;
-              @media all and (max-width: 768px) {
+              line-height: 1.2;
+              @media all and (max-width: 900px) {
                 font-size: 16px;
-                line-height: 24px;
               }
     
               &:nth-child(n + 2) {
@@ -335,9 +340,9 @@ $pink: #f2afa3;
             dd {
               margin-top: 5px;
               font-size: 16px;
-              color: #323232;
+              color: #4e4e4e;
               line-height: 24px;
-              @media all and (max-width: 768px) {
+              @media all and (max-width: 900px) {
                 font-size: 14px;
               }
             }
@@ -345,13 +350,16 @@ $pink: #f2afa3;
     
           .btn-process {
             margin-top: 50px;
-            @media all and (max-width: 768px) {
-              margin-top: 30px;
-            }
           }
         }
     
         .img-box {
+          float: right;
+          padding-left: 5%;
+          @media all and (max-width: 900px) {
+            padding-left: 0;
+          }
+
           .img {
             width: 100%;
             padding-top: 100%;
@@ -361,24 +369,27 @@ $pink: #f2afa3;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top 0 left 50%;
-            &.wireline {
-              background-image: url("../images/wireline.png");
+            &.tworld {
+              background-image: url("../images/tworld.png");
             }
             &.esim {
               background-image: url("../images/esim.png");
             }
-            &.daelim {
-              background-image: url("../images/daelim.png");
-            }
-            &.gtec {
-              background-image: url("../images/gtec.png");
-            }
-            &.inha {
-              background-image: url("../images/inha.png");
+            &.wireline {
+              background-image: url("../images/wireline.png");
             }
             &.kca {
               background-image: url("../images/kca.png");
               background-position-y: 8%;
+            }
+            &.inha {
+              background-image: url("../images/inha.png");
+            }
+            &.gtec {
+              background-image: url("../images/gtec.png");
+            }
+            &.daelim {
+              background-image: url("../images/daelim.png");
             }
             &.ikea {
               background-image: url("../images/ikea.png");
@@ -386,7 +397,7 @@ $pink: #f2afa3;
             &.zooCoffee {
               background-image: url("../images/zoocoffee.png");
             }
-            @media all and (max-width: 768px) {
+            @media all and (max-width: 900px) {
               -webkit-box-shadow: none;
               box-shadow: none;
               border: 1px solid #f5f5f5;
@@ -398,11 +409,34 @@ $pink: #f2afa3;
           }
         }
       }
+
+      .portfoilo-item:nth-child(2n) {
+        @media all and (max-width: 900px) {
+          margin: 0 -16px;
+          padding: 50px 16px;
+          background-color: #fafafa;
+        }
+
+        .txt-box {
+          float: right;
+          padding-left: 5%;
+          @media all and (max-width: 900px) {
+            padding-left: 0;
+          }
+        }
+
+        .img-box {
+          float: left;
+          padding-right: 5%;
+          @media all and (max-width: 900px) {
+            padding-right: 0;
+          }
+        }
+      }
     
-      .veiw-more-area {
-        text-align: center;
+      .btn-area {
         margin: 100px auto 50px;
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 900px) {
           margin: 70px auto 0;
         }
       }
@@ -418,7 +452,7 @@ $pink: #f2afa3;
         display: block;
         font-size: 28px;
         color: $black;
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 900px) {
           font-size: 18px;
         }
       }
@@ -429,7 +463,7 @@ $pink: #f2afa3;
         padding: 40px 0 60px;
         font-size: 60px;
         color: $black;
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 900px) {
           font-size: 26px;
           padding: 20px 0 40px;
         }
@@ -443,7 +477,7 @@ $pink: #f2afa3;
           height: 1px;
           background: $blue;
           transform: translateX(-50%);
-          @media all and (max-width: 768px) {
+          @media all and (max-width: 900px) {
             top: 10px;
             width: 10px;
           }
@@ -455,7 +489,7 @@ $pink: #f2afa3;
         font-size: 24px;
         font-weight: 300;
         color: #323232;
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 900px) {
           font-size: 20px;
         }
       }

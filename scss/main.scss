@@ -12,7 +12,7 @@ $pink: #f2afa3;
     position: relative;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
-  
+
     &:after {
       content: "";
       display: block;
@@ -20,11 +20,16 @@ $pink: #f2afa3;
       top: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, 0.5));
+      background: linear-gradient(
+        to bottom,
+        rgba(#e8a, 1),
+        rgba(#def, 0) 80%,
+        rgba(white, 0.5)
+      );
       z-index: 11;
       transform: translate3d(0, 0, 0);
     }
-  
+
     .wave {
       opacity: 0.4;
       position: absolute;
@@ -38,19 +43,19 @@ $pink: #f2afa3;
       transform-origin: 50% 48%;
       border-radius: 43%;
       animation: drift 3000ms infinite linear;
-  
+
       &.two {
         animation: drift 7000ms infinite linear;
         opacity: 0.1;
         background: #ff79ed;
       }
-  
+
       &.three {
         animation: drift 5000ms infinite linear;
         background: #007bff;
       }
     }
-  
+
     .title {
       position: relative;
       display: flex;
@@ -59,7 +64,7 @@ $pink: #f2afa3;
       min-height: 100vh;
       text-align: center;
       color: #fff;
-    
+
       h2 {
         font-size: 55px;
         line-height: 60px;
@@ -69,7 +74,7 @@ $pink: #f2afa3;
           line-height: 50px;
         }
       }
-    
+
       span {
         display: block;
         font-size: 16px;
@@ -93,7 +98,7 @@ $pink: #f2afa3;
         flex-direction: column;
         padding: 100px 16px;
       }
-    
+
       .title-box {
         display: flex;
         position: relative;
@@ -114,7 +119,7 @@ $pink: #f2afa3;
             height: 160px;
           }
         }
-    
+
         .text-area {
           padding-top: 30px;
           .title {
@@ -128,7 +133,7 @@ $pink: #f2afa3;
               font-size: 18px;
             }
           }
-  
+
           .tag {
             display: inline-block;
             margin: 0 3px 6px 0;
@@ -144,7 +149,7 @@ $pink: #f2afa3;
           }
         }
       }
-    
+
       .contents-box {
         padding-left: 60px;
         border-left: 1px solid #ddd;
@@ -153,18 +158,18 @@ $pink: #f2afa3;
           border: none;
           padding: 20px 0 0;
         }
-    
+
         ul {
-          li{
+          li {
             position: relative;
             padding-left: 30px;
-    
+
             &:nth-child(n + 2) {
               margin-top: 30px;
             }
-    
+
             &::before {
-              content: '';
+              content: "";
               position: absolute;
               left: 0;
               top: 6px;
@@ -176,7 +181,7 @@ $pink: #f2afa3;
                 top: 4px;
               }
             }
-    
+
             strong {
               font-size: 18px;
               font-weight: 500;
@@ -187,7 +192,7 @@ $pink: #f2afa3;
                 line-height: 24px;
               }
             }
-    
+
             p {
               margin-top: 5px;
               font-size: 16px;
@@ -195,7 +200,7 @@ $pink: #f2afa3;
               line-height: 24px;
               @media all and (max-width: 900px) {
                 font-size: 14px;
-      
+
                 br {
                   display: none;
                 }
@@ -224,7 +229,7 @@ $pink: #f2afa3;
   &.portfoilo {
     .inner {
       padding: 50px 16px;
-    
+
       .portfoilo-item {
         display: block;
         position: relative;
@@ -237,7 +242,7 @@ $pink: #f2afa3;
         }
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 50%;
@@ -249,20 +254,20 @@ $pink: #f2afa3;
             display: none;
           }
         }
-    
+
         > div {
           position: relative;
           width: 50%;
           box-sizing: border-box;
           @media all and (max-width: 900px) {
             width: 100%;
-    
+
             & + div {
               margin-top: 30px;
             }
           }
         }
-    
+
         .txt-box {
           float: left;
           padding-right: 5%;
@@ -280,7 +285,7 @@ $pink: #f2afa3;
                 font-size: 24px;
               }
             }
-    
+
             .tit {
               display: inline-block;
               margin-top: 15px;
@@ -295,7 +300,7 @@ $pink: #f2afa3;
                 font-size: 28px;
                 line-height: 34px;
               }
-    
+
               .category {
                 display: block;
                 font-size: 16px;
@@ -308,11 +313,11 @@ $pink: #f2afa3;
               }
             }
           }
-    
+
           dl {
             position: relative;
             padding-top: 30px;
-    
+
             &::before {
               content: "";
               position: absolute;
@@ -322,7 +327,7 @@ $pink: #f2afa3;
               height: 1px;
               background: $pink;
             }
-    
+
             dt {
               font-size: 18px;
               font-weight: 400;
@@ -331,12 +336,12 @@ $pink: #f2afa3;
               @media all and (max-width: 900px) {
                 font-size: 16px;
               }
-    
+
               &:nth-child(n + 2) {
                 margin-top: 15px;
               }
             }
-    
+
             dd {
               margin-top: 5px;
               font-size: 16px;
@@ -347,12 +352,12 @@ $pink: #f2afa3;
               }
             }
           }
-    
+
           .btn-process {
             margin-top: 50px;
           }
         }
-    
+
         .img-box {
           float: right;
           padding-left: 5%;
@@ -402,7 +407,7 @@ $pink: #f2afa3;
               box-shadow: none;
               border: 1px solid #f5f5f5;
             }
-    
+
             img {
               max-width: 100%;
             }
@@ -433,7 +438,7 @@ $pink: #f2afa3;
           }
         }
       }
-    
+
       .btn-area {
         margin: 100px auto 50px;
         @media all and (max-width: 900px) {
@@ -447,7 +452,7 @@ $pink: #f2afa3;
   &.contact {
     .inner {
       text-align: center;
-    
+
       .tit {
         display: block;
         font-size: 28px;
@@ -456,7 +461,7 @@ $pink: #f2afa3;
           font-size: 18px;
         }
       }
-    
+
       .mail {
         display: block;
         position: relative;
@@ -467,7 +472,7 @@ $pink: #f2afa3;
           font-size: 26px;
           padding: 20px 0 40px;
         }
-    
+
         &::before {
           content: "";
           position: absolute;
@@ -483,7 +488,7 @@ $pink: #f2afa3;
           }
         }
       }
-    
+
       .text {
         display: block;
         font-size: 24px;
